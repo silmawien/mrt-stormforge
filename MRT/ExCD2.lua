@@ -12291,8 +12291,8 @@ if ExRT.isBC then
 		{31884,	"PALADIN",	1,	{31884,	180,	20}},	--AW
 
 		{16190,	"SHAMAN",	1,	{16190,	300,	12}},	--MTT
-		{32182,	"SHAMAN",	1,	{32182,	600,	40},	specialCheck=function() if UnitFactionGroup('player')=="Alliance" then return true end end},	--BL [A]
-		{2825,	"SHAMAN",	1,	{2825,	600,	40},	specialCheck=function() if UnitFactionGroup('player')=="Horde" then return true end end},	--BL [H]
+		{32182,	"SHAMAN",	1,	{32182,	600,	40},	specialCheck=function(_,_,_,r) if r=="Draenei" then return true end end},	--BL [A]
+		{2825,	"SHAMAN",	1,	{2825,	600,	40},	specialCheck=function(_,_,_,r) if r~="Draenei" then return true end end},	--BL [H]
 		{20608,	"SHAMAN",	1,	{21169,	3600,	0}},	--Reincarnation
 		{2894, 	"SHAMAN",	1,	{2894,	1200,	120}},	--FET
 		{2062, 	"SHAMAN",	1,	{2062, 	1200,	120}},	--EET
