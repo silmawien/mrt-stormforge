@@ -11506,6 +11506,12 @@ function module:slash(arg1,arg2)
 				j:SetCD(0)
 			end
 		end
+	elseif string.find(arg1,"resetlust") then
+		for x, y in pairs(_C) do
+			if y.spellName == "Bloodlust" or y.spellName == "Heroism" then
+				y.ResetCD(y)
+			end
+		end
 	elseif arg1 == "cd" then
 		if not VMRT.ExCD2.enabled then
 			module:Enable()
